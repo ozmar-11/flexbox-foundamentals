@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+}
+
+ul#flex-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 300px;
+    align-items: stretch;
+}
+/*
+    manage the manner of display the items
+    flex-direction: row, row-reverse, column, column-reverse;
+    flex-wrap: wrap; respect the size of each children in this 100px of the li tags once we run out of space
+    it display the rest of the items in another row to keep the minimum size of the items the wrap-reverse, display the
+    items in reverse order
+    The flex-grow: int; divide the total width in total of elements that has the fex-grow
+    justify-content: space-between; order the elements in the way we specify
+    The align-items move the elements in order of vertically
+    The align-self move the element specified vertically just like the align-items
+*/
+
+ul li {
+    width: 100px;
+    padding-top: 45px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+/* using the order: index; display the items in the order we specify*/
+ul li:first-child { background: #c2d775;  }
+ul li:nth-child(2) { background: #007278; }
+ul li:nth-child(3) { background: #c7b600; align-self: flex-end}
+ul li:nth-child(4) { background: #a90077; }
+ul li:nth-child(5) { background: #00a378; }
+ul li:last-child { background: #00ea72; }
